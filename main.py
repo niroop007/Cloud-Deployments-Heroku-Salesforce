@@ -59,21 +59,21 @@ def formtodocx():
         watt_low=request.form['9w']
         watt_high=request.form['12w']
         
-        client="Niroop"
-        doc = docx.Document("D:\\Udak\\InstantSalesQuote\\uploads\\template.docx")
+        #client="Niroop"
+        #doc = docx.Document("D:\\Udak\\InstantSalesQuote\\uploads\\template.docx")
         
-        quote_path="D:\\Udak\\InstantSalesQuote\\uploads\\"+'client'".docx"
+        #quote_path="D:\\Udak\\InstantSalesQuote\\uploads\\"+'client'".docx"
         p=doc.add_paragraph("\n\n\n\n\n\n\n")
-        p.add_run('To,\n')
-        p.add_run('Botanika\n').bold = True
+        #p.add_run('To,\n')
+        #p.add_run('Botanika\n').bold = True
         #p.add_run("Botanika").bold=True
-        p=doc.add_paragraph("#242 Raja Rajeshwari Nagar Colony\nKondapur, Hyderabad\nTelangana 500 084\nPhone: +91 97010 49715\nE-mail: business@udaktech.com,")
-        p=doc.add_paragraph("\n\n")
-        p=doc.add_paragraph("Dear "+client+" Garu,")
-        p=doc.add_paragraph("\n")
-        p=doc.add_paragraph("The below quote is based on the following details we obtained from you on "+sys_date+".The quote would be adjusted as and when new details/updates are observed during the course of discussion/consultation.")
-        p=doc.add_paragraph("\n")
-        p=doc.add_paragraph("\t""1. B1, B2 basements are common for everyone and they have 190 plus LED tube lights, which are turned on 24X7.\n"
+        #p=doc.add_paragraph("#242 Raja Rajeshwari Nagar Colony\nKondapur, Hyderabad\nTelangana 500 084\nPhone: +91 97010 49715\nE-mail: business@udaktech.com,")
+        #p=doc.add_paragraph("\n\n")
+        #p=doc.add_paragraph("Dear "+client+" Garu,")
+        #p=doc.add_paragraph("\n")
+        #p=doc.add_paragraph("The below quote is based on the following details we obtained from you on "+sys_date+".The quote would be adjusted as and when new details/updates are observed during the course of discussion/consultation.")
+        #p=doc.add_paragraph("\n")
+        #p=doc.add_paragraph("\t""1. B1, B2 basements are common for everyone and they have 190 plus LED tube lights, which are turned on 24X7.\n"
                             "\t2. Based on our field study we are going install ELSA sensors to around 70% of lights.\n"
                             "\t3. We will leave 30% of tube lights to maintain…\n"
                             "\t\t\ta. Ambient lighting\n"
@@ -84,28 +84,28 @@ def formtodocx():
                             "\t7. Payment of Subscription Model would be post-paid and will start from the date of delivery.\n")
         
         
-        doc.add_page_break()
-        p=doc.add_paragraph("\n\n\n\n")
-        p.add_run('Quote\n').bold = True
-        p=doc.add_paragraph("The following equipment and charges would be part of the final quotation submitted.\n")
+        #doc.add_page_break()
+        #p=doc.add_paragraph("\n\n\n\n")
+        #p.add_run('Quote\n').bold = True
+        #p=doc.add_paragraph("The following equipment and charges would be part of the final quotation submitted.\n")
         ################ONE TIME PAYMENT########################
-        p=doc.add_paragraph("OPTION 1: One Time Payment\n")
-        table1 = doc.add_table(rows = 1, cols = 4, style='Table Grid')
-        OTP_cells = table1.rows[0].cells
-        OTP_cells[0].text = 'Item'
-        OTP_cells[1].text = 'Description'
-        OTP_cells[2].text = 'Quantity'
-        OTP_cells[3].text = 'Price (Rs.)'
-        cells = table1.add_row().cells
-        cells[0].text = "1."
-        cells[1].text = "ELSA sensor with inbuilt activity and lux detection, along with adjustable knobs for specific adjustments. (Rs. 799/Sensor)*"
-        cells[2].text = "133"
-        cells[3].text = "1,06,267"
-        cells = table1.add_row().cells
-        cells[0].text = "2."
-        cells[1].text = "One Year Full Product Replacement Guarantee**"
-        cells[2].text = " "
-        cells[3].text = "Free"
+        #p=doc.add_paragraph("OPTION 1: One Time Payment\n")
+        #table1 = doc.add_table(rows = 1, cols = 4, style='Table Grid')
+        #OTP_cells = table1.rows[0].cells
+        #OTP_cells[0].text = 'Item'
+        #OTP_cells[1].text = 'Description'
+        #OTP_cells[2].text = 'Quantity'
+        #OTP_cells[3].text = 'Price (Rs.)'
+        #cells = table1.add_row().cells
+        #cells[0].text = "1."
+        #cells[1].text = "ELSA sensor with inbuilt activity and lux detection, along with adjustable knobs for specific adjustments. (Rs. 799/Sensor)*"
+        #cells[2].text = "133"
+        #cells[3].text = "1,06,267"
+        #cells = table1.add_row().cells
+        #cells[0].text = "2."
+        #cells[1].text = "One Year Full Product Replacement Guarantee**"
+        #cells[2].text = " "
+        #cells[3].text = "Free"
 
         ##########################################################
         
@@ -114,25 +114,25 @@ def formtodocx():
 
         ################Subscription Model########################
         
-        p=doc.add_paragraph("\nOPTION 2: Subscription Model\n")
-        table2 = doc.add_table(rows = 1, cols = 4, style='Table Grid')
-        SM_cells = table2.rows[0].cells
-        SM_cells[0].text = 'Item'
-        SM_cells[1].text = 'Description'
-        SM_cells[2].text = 'Quantity'
-        SM_cells[3].text = 'Price (Rs.)'
-        cells = table2.add_row().cells
-        cells[0].text = "1."
-        cells[1].text = "Solution is subscription based, wherein company gives the product free and users pay nominal monthly fee of Rs 75/Sensor*"
-        cells[2].text = "133"
-        cells[3].text = "9,975/month"
-        cells = table2.add_row().cells
-        cells[0].text = "2."
-        cells[1].text = "Full Product Maintenance & Replacement Guarantee**"
-        cells[2].text = " "
-        cells[3].text = "Lifetime Free***"
+        #p=doc.add_paragraph("\nOPTION 2: Subscription Model\n")
+        #table2 = doc.add_table(rows = 1, cols = 4, style='Table Grid')
+        #SM_cells = table2.rows[0].cells
+        #SM_cells[0].text = 'Item'
+        #SM_cells[1].text = 'Description'
+        #SM_cells[2].text = 'Quantity'
+        #SM_cells[3].text = 'Price (Rs.)'
+        #cells = table2.add_row().cells
+        #cells[0].text = "1."
+        #cells[1].text = "Solution is subscription based, wherein company gives the product free and users pay nominal monthly fee of Rs 75/Sensor*"
+        #cells[2].text = "133"
+        #cells[3].text = "9,975/month"
+        #cells = table2.add_row().cells
+        #cells[0].text = "2."
+        #cells[1].text = "Full Product Maintenance & Replacement Guarantee**"
+        #cells[2].text = " "
+        #cells[3].text = "Lifetime Free***"
         ###########################################################
-        p=doc.add_paragraph("\n\n* 18% GST is exclusive of the above details and would be part of the final invoice.\n"
+        #p=doc.add_paragraph("\n\n* 18% GST is exclusive of the above details and would be part of the final invoice.\n"
                              "** Any and every defective sensor would be fully replaced, with no additional charges to the customer.\n"
                              "*** Product will be owned & maintained by UDAK under active subscription\n"
                              "\nIf you have any questions, please do not hesitate to contact us.\n"
@@ -148,19 +148,19 @@ def formtodocx():
         
         
         
-        saved_doc=doc.save(quote_path)
-        docxtopdf(quote_path)
+        #saved_doc=doc.save(quote_path)
+        #docxtopdf(quote_path)
         
        
 
 
 
-def generate_smatrix(docx_file):
-    convert(docx_file)
+#def generate_smatrix(docx_file):
+    #convert(docx_file)
 
 
-def docxtopdf(docx_file):
-    convert(docx_file)
+#def docxtopdf(docx_file):
+    #convert(docx_file)
     
     #return render_template('result.html')
 if __name__ == '__main__':
