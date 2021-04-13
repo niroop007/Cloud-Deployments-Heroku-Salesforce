@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Savings Proposal</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="../static/images/img-01.png" alt="IMG">
+			</div>
+
+			<form class="contact1-form validate-form" action="{{ url_for("formtodocx")}}" method="post" id="quote">
+				<span class="contact1-form-title">
+					Instant Savings Proposal
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input class="input1" type="text" name="clientname" placeholder="Client Name">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input class="input1" type="text" name="commname" placeholder="Community Name">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input class="input1" type="text" name="email" placeholder="Email">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<input class="input1" type="text" name="contact" placeholder="Contact Number">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+					<textarea class="input1" name="address" placeholder="Address"></textarea>
+					<span class="shadow-input1"></span>
+				</div>
+				<! ---------------------BASEMENT CHECKS-------------------------------------- -->
+						<! ----------------BASEMENT B1--------------------------- -->
+				<div class="wrap-input1 validate-input" data-validate = "Is required">
+					<input type="checkbox" id="B1" name="has_b1" value="B1" onclick="hide_Func()">
+					&nbsp;<label for="vehicle1"> Has Basement B1</label><br>
+					
+					<input class="input1" style="display:none" id="b1_input" type="text" name="count_b1" placeholder="No of Lights">
+					<span class="shadow-input1"></span><br>
+					<div class="wrap-input1 validate-input" data-validate = "Is required" style="display:none" id="b1_watt">
+						<br><p>Select Light Wattage:</p><br>
+							<input class="contact1-form-radio" type="radio" id="9w" name="9w" value="9w">
+							<label class="contact1-form-radio" for="9w">9 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="12w" name="12w" value="12w">
+							<label class="contact1-form-radio"for="12w">12 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="20w" name="20w" value="20w">
+							<label class="contact1-form-radio"for="20w">20 Watt</label><br>
+						</div>
+					  
+				</div>
+				<! ----------------BASEMENT B2--------------------------- -->
+				<div class="wrap-input1 validate-input" data-validate = "Is required">
+					<input type="checkbox" id="B2" name="has_b2" value="B2" onclick="hide_Func()">
+					&nbsp;<label for="vehicle1"> Has Basement B2</label><br>
+					
+					<input class="input1" style="display:none" id="b2_input" type="text" name="count_b2" placeholder="No of Lights">
+					<span class="shadow-input1"></span><br>
+					<div class="wrap-input1 validate-input" data-validate = "Is required" style="display:none" id="b2_watt">
+						<br><p>Select Light Wattage:</p><br>
+							<input class="contact1-form-radio" type="radio" id="b2_9w" name="9w" value="9w">
+							<label class="contact1-form-radio" for="9w">9 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="b2_12w" name="12w" value="12w">
+							<label class="contact1-form-radio"for="12w">12 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="b2_20w" name="20w" value="20w">
+							<label class="contact1-form-radio"for="20w">20 Watt</label><br>
+						</div>
+					  
+				</div>
+				<! -------------------------------------------------------------------------------------------- -->
+				<! ----------------BASEMENT B3--------------------------- -->
+				<div class="wrap-input1 validate-input" data-validate = "Is required">
+					<input type="checkbox" id="B3" name="has_b3" value="B3" onclick="hide_Func()">
+					&nbsp;<label for="vehicle1"> Has Basement B3</label><br>
+					
+					<input class="input1" style="display:none" id="b3_input" type="text" name="count_b3" placeholder="No of Lights">
+					<span class="shadow-input1"></span><br>
+					<div class="wrap-input1 validate-input" data-validate = "Is required" style="display:none" id="b3_watt">
+						<br><p>Select Light Wattage:</p><br>
+							<input class="contact1-form-radio" type="radio" id="b3_9w" name="9w" value="9w">
+							<label class="contact1-form-radio" for="9w">9 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="b3_12w" name="12w" value="12w">
+							<label class="contact1-form-radio"for="12w">12 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="b3_20w" name="20w" value="20w">
+							<label class="contact1-form-radio"for="20w">20 Watt</label><br>
+						</div>
+					  
+				</div>
+				<! -------------------------------------------------------------------------------------------- -->
+				<! ----------------STAIRCASE WISE DETAILS--------------------------- -->
+				<div class="wrap-input1 validate-input" data-validate = "Is required">
+					<input type="checkbox" id="SC1" name="SC1" value="SC1" onclick="hide_Func()">
+					&nbsp;<label for="vehicle1"> Add StairCase ?</label><br>
+					
+					<input class="input1" style="display:none" id="sc1_input" type="text" name="count_sc1" placeholder="No of Lights">
+					<span class="shadow-input1"></span><br>
+					<div class="wrap-input1 validate-input" data-validate = "Is required" style="display:none" id="sc1_watt">
+						<br><p>Select Light Wattage:</p><br>
+							<input class="contact1-form-radio" type="radio" id="sc1_9w" name="9w" value="9w">
+							<label class="contact1-form-radio" for="9w">9 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="sc1_12w" name="12w" value="12w">
+							<label class="contact1-form-radio"for="12w">12 Watt</label>
+							<input class="contact1-form-radio" type="radio" id="sc1_20w" name="20w" value="20w">
+							<label class="contact1-form-radio"for="20w">20 Watt</label><br>
+						</div>
+					  
+				</div>
+				<! -------------------------------------------------------------------------------------------- -->
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i><br>
+						</span></button>
+						
+						<input type="button" class="contact1-form-btn" onclick="newFunction()" value="Reset"><br><br>
+						
+						
+						
+					
+				</div>
+				<br>
+				<div class="container-contact1-form-btn">
+				<button class="contact1-form-btn">
+					<span>
+						Generate Savings Matrix
+						<i class="fa fa-long-arrow-right" aria-hidden="true"></i><br>
+					</span></button>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+		
+<script>
+         function newFunction() {
+            document.getElementById("quote").reset();
+         }
+      </script>
+	  <script>
+		function hide_Func() {
+		  var checkBox1 = document.getElementById("B1");
+		  var checkBox2 = document.getElementById("B2");
+		  var checkBox3 = document.getElementById("B3");
+		  var staircase1 = document.getElementById("SC1");
+		  var input1 = document.getElementById("b1_input");
+		  var wattcheck1=document.getElementById("b1_watt")
+		  var input2 = document.getElementById("b2_input");
+		  var wattcheck2=document.getElementById("b2_watt")
+		  var input3 = document.getElementById("b3_input");
+		  var wattcheck3=document.getElementById("b3_watt")
+		  var input4 = document.getElementById("sc1_input");
+		  var stairwattcheck1=document.getElementById("sc1_watt")
+		  if (checkBox1.checked == true){
+			input1.style.display = "block";
+			wattcheck1.style.display = "block";
+		  }
+			else if(checkBox2.checked == true){
+			input2.style.display = "block";
+			wattcheck2.style.display = "block";
+			}
+			else if(checkBox3.checked == true){
+			input3.style.display = "block";
+			wattcheck3.style.display = "block";
+			}
+			else if(staircase1.checked == true){
+			input4.style.display = "block";
+			stairwattcheck1.style.display = "block";
+			}
+		   else {
+			input1.style.display = "none";
+			wattcheck1.style.display = "none";
+			input2.style.display = "none";
+			wattcheck2.style.display = "none";
+			input3.style.display = "none";
+			wattcheck3.style.display = "none";
+			input4.style.display = "none";
+			stairwattcheck1.style.display = "none";
+		  }
+		}
+		</script>
+
+
+<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>
+
+</body>
+</html>
