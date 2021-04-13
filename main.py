@@ -74,14 +74,14 @@ def formtodocx():
         #p=doc.add_paragraph("The below quote is based on the following details we obtained from you on "+sys_date+".The quote would be adjusted as and when new details/updates are observed during the course of discussion/consultation.")
         #p=doc.add_paragraph("\n")
         #p=doc.add_paragraph("\t""1. B1, B2 basements are common for everyone and they have 190 plus LED tube lights, which are turned on 24X7.\n"
-                            "\t2. Based on our field study we are going install ELSA sensors to around 70% of lights.\n"
-                            "\t3. We will leave 30% of tube lights to maintain…\n"
-                            "\t\t\ta. Ambient lighting\n"
-                            "\t\t\tb. Driveways\n"
-                            "\t4. The number of sensors need to be installed may vary based on the ground truth. The invoice would be adjusted, to reflect the final number of sensors installed.\n"
-                            "\t5. As discussed and suggested, installation would be done by UDAK Team.\n"
-                            "\t6. Payment of One Time Model would be in 2 installments (50% on delivery and 50% on completion of installation).\n"
-                            "\t7. Payment of Subscription Model would be post-paid and will start from the date of delivery.\n")
+        #                    "\t2. Based on our field study we are going install ELSA sensors to around 70% of lights.\n"
+        #                    "\t3. We will leave 30% of tube lights to maintain…\n"
+        #                    "\t\t\ta. Ambient lighting\n"
+        #                    "\t\t\tb. Driveways\n"
+        #                    "\t4. The number of sensors need to be installed may vary based on the ground truth. The invoice would be adjusted, to reflect the final number of sensors installed.\n"
+        #                    "\t5. As discussed and suggested, installation would be done by UDAK Team.\n"
+        #                    "\t6. Payment of One Time Model would be in 2 installments (50% on delivery and 50% on completion of installation).\n"
+        #                    "\t7. Payment of Subscription Model would be post-paid and will start from the date of delivery.\n")
         
         
         #doc.add_page_break()
@@ -133,12 +133,12 @@ def formtodocx():
         #cells[3].text = "Lifetime Free***"
         ###########################################################
         #p=doc.add_paragraph("\n\n* 18% GST is exclusive of the above details and would be part of the final invoice.\n"
-                             "** Any and every defective sensor would be fully replaced, with no additional charges to the customer.\n"
-                             "*** Product will be owned & maintained by UDAK under active subscription\n"
-                             "\nIf you have any questions, please do not hesitate to contact us.\n"
-                             "\n\nKind regards,\n"
-                             "UDAK Technologies Pvt Ltd.")
-        
+        #                     "** Any and every defective sensor would be fully replaced, with no additional charges to the customer.\n"
+         #                    "*** Product will be owned & maintained by UDAK under active subscription\n"
+         #                    "\nIf you have any questions, please do not hesitate to contact us.\n"
+        #                    "\n\nKind regards,\n"
+        #                     "UDAK Technologies Pvt Ltd.")
+        #
         
         
         
