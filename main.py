@@ -8,7 +8,7 @@ import os
 from docx import Document
 import docx
 from docx2pdf import convert
-from flask import Flask,render_template,url_for,request
+from flask import Flask, render_template, request, redirect, flash, url_for
 from datetime import date
 from docx.shared import Cm, Pt
 from docx.enum.style import WD_STYLE_TYPE
@@ -34,7 +34,7 @@ def returnhome():
     
     return render_template('index.html')
 
-@app.route('/formtodocx',methods=['POST'])
+@app.route('/formtodocx',methods = ['GET', 'POST'])
 def formtodocx():
     if request.method == 'POST':
         
@@ -60,9 +60,9 @@ def formtodocx():
         watt_high=request.form['12w']
         
         client="Niroop"
-        doc = docx.Document("D:\\Udak\\InstantSalesQuote\\downloads\\template.docx")
+        doc = docx.Document("D:\\Udak\\InstantSalesQuote\\uploads\\template.docx")
         
-        quote_path="D:\\Udak\\InstantSalesQuote\\downloads\\"+'client'".docx"
+        quote_path="D:\\Udak\\InstantSalesQuote\\uploads\\"+'client'".docx"
         p=doc.add_paragraph("\n\n\n\n\n\n\n")
         p.add_run('To,\n')
         p.add_run('Botanika\n').bold = True
