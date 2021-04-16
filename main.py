@@ -190,7 +190,7 @@ def formtodocx():
         
         
         doc.save(os.path.join("\\static\\" +client_name+ ".pdf"))
-        
+        time.sleep(10)
         doc_path=".\\static\\"+client_name+".pdf"
         print(doc_path)
         print("PDF Created Successfully")
