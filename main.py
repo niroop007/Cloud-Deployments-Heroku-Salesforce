@@ -16,7 +16,7 @@ from docx.enum.style import WD_STYLE_TYPE
 import time
 
 UPLOAD_FOLDER = 'uploads'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 
 
 
@@ -30,6 +30,7 @@ sys_date = today.strftime("%d/%m/%Y")
 
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "secret key"
 
 
