@@ -7,7 +7,7 @@ Created on Apr-11-2021
 import os
 from docx import Document
 import docx
-from docx2pdf import convert
+#from docx2pdf import convert
 from flask import Flask, render_template, request, redirect, flash, url_for, send_file
 from datetime import date
 from docx.shared import Cm, Pt
