@@ -15,7 +15,8 @@ from docx.enum.style import WD_STYLE_TYPE
 #import pythoncom
 import time
 
-
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 
@@ -95,7 +96,7 @@ def formtodocx():
         
         
         #pythoncom.CoInitialize()
-        doc = docx.Document(".\\uploads\\template.docx")
+        doc = docx.Document(os.path.join(app.config['UPLOAD_FOLDER'],"template.docx"))
         
         
         p=doc.add_paragraph("\n\n\n\n\n\n\n")
