@@ -12,7 +12,7 @@ from flask import Flask, render_template, request, redirect, flash, url_for, sen
 from datetime import date
 from docx.shared import Cm, Pt
 from docx.enum.style import WD_STYLE_TYPE
-import pythoncom
+#import pythoncom
 import time
 
 
@@ -94,7 +94,7 @@ def formtodocx():
         #    o2_total_price=elsa_price_o2(o1_count)
         
         
-        pythoncom.CoInitialize()
+        #pythoncom.CoInitialize()
         doc = docx.Document(".\\uploads\\template.docx")
         
         
