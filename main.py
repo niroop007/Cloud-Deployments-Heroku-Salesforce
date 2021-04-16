@@ -193,8 +193,8 @@ def formtodocx():
         time.sleep(10)
         doc_path=".\\static\\"+client_name+".pdf"
         print(doc_path)
-        print("PDF Created Successfully")
-	print(os.path.getsize(doc_path))
+        print(os.path.getsize(doc_path))
+	#print(os.path.getsize(doc_path))
         #docxtopdf(doc_path)
         quote_path=client_name+".pdf"
         print(quote_path)
