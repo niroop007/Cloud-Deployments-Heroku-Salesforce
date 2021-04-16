@@ -189,12 +189,12 @@ def formtodocx():
         
         
         
-        doc.save(os.path.join("\\static\\" +client_name+ ".docx"))
+        doc.save(os.path.join("\\static\\" +client_name+ ".pdf"))
         
-        doc_path=".\\static\\"+client_name+".docx"
+        doc_path=".\\static\\"+client_name+".pdf"
         print(doc_path)
-        
-        docxtopdf(doc_path)
+        print("PDF Created Successfully")
+        #docxtopdf(doc_path)
         quote_path=client_name+".pdf"
         print(quote_path)
         #file_download(quote_path)
@@ -210,10 +210,10 @@ def generate_smatrix(docx_file):
     convert(docx_file)
 
 
-def docxtopdf(docx_file):
-    convert(docx_file)
-    time.sleep(5)
-    print("PDF Created Successfully")
+#def docxtopdf(docx_file):
+#    convert(docx_file)
+#    time.sleep(5)
+#    print("PDF Created Successfully")
     
 def elsa_price_o1(total1):
     return total1*799
