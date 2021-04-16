@@ -4,6 +4,7 @@
 	<title>Savings Proposal</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/common.js') }}"></script>
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}">
 <!--===============================================================================================-->
@@ -23,27 +24,30 @@
 </head>
 
 <body>
-
+	
+	
 	<div class="contact1">
+		  
 		
 
-			<form class="contact1-form validate-form" action="{{ url_for("formtodocx")}}" method="post">
+			<form class="contact1-form validate-form" method="GET" action="{{ url_for('static', filename=filename) }}" id="quotedownload">
 				<span class="contact1-form-title">
 					Preview & Download Savings Proposal
+					
 				</span>
-
+				<a href="{{ url_for('static', filename=filename) }}">Download</a>
 				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn">
+					<button class="contact1-form-btn" type="submit">
 						<span>
 							Download Quote
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i><br>
 						</span>						
-             
+						
 												
 					</button>
 				</div><br>
 				</form>
-				<embed src="D:\\Udak\\Bhavya Akhila Exotica\\ELSA_Bhavya Akhila Exotica_Basement_Quotation.pdf" type="application/pdf" frameBorder="0" scrolling="auto" height="1000" width="1000">
+				<embed src="{{ url_for('static', filename=filename) }}" type="application/pdf" frameBorder="0" scrolling="auto" height="1000" width="1000">
 				
 			
 		</div>
@@ -59,6 +63,6 @@
 
 <!--===============================================================================================-->
 	
-	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	
 </body>
 </html>
