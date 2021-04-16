@@ -187,7 +187,7 @@ def formtodocx():
         
         
         
-        os.path.join(app.config['UPLOAD_FOLDER'],filename)
+        
         doc.save(os.path.join("\\static\\" +client_name+ ".docx"))
         
         doc_path=".\\static\\"+client_name+".docx"
